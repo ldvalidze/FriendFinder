@@ -3,9 +3,8 @@
 // We are linking our routes to a series of "data" sources.
 // These data sources hold arrays of information on table-data, waitinglist, etc.
 // ===============================================================================
-var path = require("path");
 var friends = require("../data/friends");
-console.log('friends: '+friends);
+console.log('friends: '+friends[0].name);
 // ===============================================================================
 // ROUTING
 // ===============================================================================
@@ -17,9 +16,9 @@ module.exports = function(app) {
   // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
   // ---------------------------------------------------------------------------
 
- 
-
-
+  app.get("/api/friends", function(req, res) {
+    res.json(friends);
+  });
 
   // API POST Requests
   // Below code handles when a user submits a form and thus submits data to the server.
@@ -35,10 +34,6 @@ module.exports = function(app) {
     // req.body is available since we're using the body-parser middleware
     
     friends.push(req.body);
-      res.json(true);
-  });
-
-  app.get("/api/friends", function(req, res) {
-    res.json(friends);
+    res.json(true);
   });
 };
