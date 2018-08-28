@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geochanto/friend-finder.git"
+    "url": "git+https://github.com/ldvalidze/friend-finder.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/geochanto/friend-finder/issues"
+    "url": "https://github.com/ldvalidze/friend-finder/issues"
   },
-  "homepage": "https://github.com/geochanto/friend-finder#readme",
+  "homepage": "https://github.com/ldvalidze/friend-finder#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
